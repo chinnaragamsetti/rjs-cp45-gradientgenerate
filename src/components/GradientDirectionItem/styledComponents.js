@@ -3,8 +3,8 @@
 import styled from 'styled-components'
 
 export const CustomButton = styled.button`
-  background-color: ${props => props.isActive};
-  opacity: 0.5;
+  background-color: ${props => props.IsActive};
+  opacity: ${props => (props.IsActive === true ? 1 : 0.5)};
   color: black;
   border-radius: 3px;
   margin-right: 5px;

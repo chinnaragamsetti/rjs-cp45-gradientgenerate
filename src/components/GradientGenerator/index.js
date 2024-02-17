@@ -47,7 +47,12 @@ class GradientGenerator extends Component {
   render() {
     const {c1, c2, direction} = this.state
     return (
-      <MainCont bgstatus={direction} color1={c1} color2={c2}>
+      <MainCont
+        bgstatus={direction}
+        color1={c1}
+        color2={c2}
+        data-testid="gradientGenerator"
+      >
         <MainHead>Generate a CSS Color Gradient</MainHead>
         <Para>Choose Direction</Para>
         <Ul>
