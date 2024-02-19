@@ -10,13 +10,15 @@ const GradientDirectionItem = props => {
   }
 
   return (
-    <CustomButton
-      key={directionId}
-      onClick={onChangebutton}
-      IsActive={isActive ? '#ffffff' : 'c1'}
-    >
-      {displayText}
-    </CustomButton>
+    <li>
+      <CustomButton
+        key={directionId}
+        onClick={onChangebutton}
+        IsActive={isActive ? '#ffffff' : 'c1'}
+      >
+        {displayText}
+      </CustomButton>
+    </li>
   )
 }
 

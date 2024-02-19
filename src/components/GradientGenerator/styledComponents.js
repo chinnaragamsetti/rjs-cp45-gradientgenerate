@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 export const MainCont = styled.div`
   background-image: linear-gradient(
-    to right,
+    to ${props => props.bgstatus},
     ${props => props.color1},
     ${props => props.color2}
   );
@@ -28,6 +28,7 @@ export const Para = styled.p`
 export const Ul = styled.ul`
   display: flex;
   flex-direction: row;
+  list-style-type: none;
   justify-content: space-between;
   align-items: center;
 `

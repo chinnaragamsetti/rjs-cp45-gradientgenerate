@@ -24,7 +24,7 @@ class GradientGenerator extends Component {
   state = {
     c1: '#8ae323',
     c2: '#014f7b',
-    direction: gradientDirectionsList[0].directionId,
+    direction: gradientDirectionsList[0].value,
     generate: false,
   }
 
