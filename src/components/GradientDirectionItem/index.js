@@ -2,19 +2,19 @@
 import {CustomButton} from './styledComponents'
 
 const GradientDirectionItem = props => {
-  const {eachItem, onChangeButton, isActive} = props
-  const {directionId, displayText} = eachItem
+  const {eachItem, onChangeButton} = props
+  const {directionId, displayText, value} = eachItem
 
-  const onChangebutton = () => {
-    onChangeButton(directionId)
+  const onChangeDirection = () => {
+    onChangeButton(value)
   }
 
   return (
     <li>
       <CustomButton
         key={directionId}
-        onClick={onChangebutton}
-        IsActive={isActive ? '#ffffff' : 'c1'}
+        onClick={onChangeDirection}
+        // IsActive={isActive ? '#ffffff' : 'c1'}
       >
         {displayText}
       </CustomButton>

@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 export const MainCont = styled.div`
   background-image: linear-gradient(
-    to ${props => props.bgstatus},
+    to ${props => props.bgStatus},
     ${props => props.color1},
     ${props => props.color2}
   );

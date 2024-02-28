@@ -1,3 +1,5 @@
+/* eslint-disable react/no-unused-state */
+/* eslint-disable react/sort-comp */
 import {Component} from 'react'
 import {
   MainCont,
@@ -25,11 +27,11 @@ class GradientGenerator extends Component {
     c1: '#8ae323',
     c2: '#014f7b',
     direction: gradientDirectionsList[0].value,
-    generate: false,
+    changeBackground: gradientDirectionsList[0].value,
   }
 
-  onChangeButton = directionId => {
-    this.setState({direction: directionId})
+  onChangeButton = value => {
+    this.setState({direction: value})
   }
 
   onChangeC1 = event => {
@@ -41,14 +43,15 @@ class GradientGenerator extends Component {
   }
 
   onGenerate = () => {
-    this.setState(prevState => ({generate: !prevState.generate}))
+    const {direction} = this.state
+    this.setState({changeBackground: direction})
   }
 
   render() {
-    const {c1, c2, direction} = this.state
+    const {c1, c2, changeBackground} = this.state
     return (
       <MainCont
-        bgstatus={direction}
+        bgStatus={changeBackground}
         color1={c1}
         color2={c2}
         data-testid="gradientGenerator"
@@ -59,7 +62,7 @@ class GradientGenerator extends Component {
           {gradientDirectionsList.map(each => (
             <GradientDirectionItem
               key={each.directionId}
-              isActive={direction === each.directionId}
+              // isActive={direction === each.directionId}
               onChangeButton={this.onChangeButton}
               eachItem={each}
             />
@@ -69,11 +72,11 @@ class GradientGenerator extends Component {
         <InputsCont>
           <InputCont>
             <Para>{c1}</Para>
-            <Input type="color" value={c1} onChange={this.onChangeC1} />
+            <Input type="color" value={c1} onClick={this.onChangeC1} />
           </InputCont>
           <InputCont>
             <Para>{c2}</Para>
-            <Input type="color" value={c2} onChange={this.onChangeC2} />
+            <Input type="color" value={c2} onClick={this.onChangeC2} />
           </InputCont>
         </InputsCont>
         <Button type="button" onClick={this.onGenerate}>

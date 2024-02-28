@@ -1,5 +1,3 @@
-// Style your elements here
-
 import styled from 'styled-components'
 
 export const CustomButton = styled.button`
