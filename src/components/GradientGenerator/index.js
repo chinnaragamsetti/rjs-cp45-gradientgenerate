@@ -48,7 +48,7 @@ class GradientGenerator extends Component {
   }
 
   render() {
-    const {c1, c2, changeBackground} = this.state
+    const {c1, c2, changeBackground, direction} = this.state
     return (
       <MainCont
         bgStatus={changeBackground}
@@ -62,7 +62,7 @@ class GradientGenerator extends Component {
           {gradientDirectionsList.map(each => (
             <GradientDirectionItem
               key={each.directionId}
-              // isActive={direction === each.directionId}
+              isActive={direction === each.value}
               onChangeButton={this.onChangeButton}
               eachItem={each}
             />
@@ -72,16 +72,14 @@ class GradientGenerator extends Component {
         <InputsCont>
           <InputCont>
             <Para>{c1}</Para>
-            <Input type="color" value={c1} onClick={this.onChangeC1} />
+            <Input type="color" value={c1} onChange={this.onChangeC1} />
           </InputCont>
           <InputCont>
             <Para>{c2}</Para>
-            <Input type="color" value={c2} onClick={this.onChangeC2} />
+            <Input type="color" value={c2} onChange={this.onChangeC2} />
           </InputCont>
         </InputsCont>
-        <Button type="button" onClick={this.onGenerate}>
-          Generate
-        </Button>
+        <Button onClick={this.onGenerate}>Generate</Button>
       </MainCont>
     )
   }
