@@ -27,7 +27,7 @@ class GradientGenerator extends Component {
     c1: '#8ae323',
     c2: '#014f7b',
     direction: gradientDirectionsList[0].value,
-    changeBackground: gradientDirectionsList[0].value,
+    changeBackground: `to ${gradientDirectionsList[0].value},#8ae323,#014f7b`,
   }
 
   onChangeButton = value => {
@@ -43,8 +43,8 @@ class GradientGenerator extends Component {
   }
 
   onGenerate = () => {
-    const {direction} = this.state
-    this.setState({changeBackground: direction})
+    const {direction, c1, c2} = this.state
+    this.setState({changeBackground: `to ${direction}, ${c1}, ${c2}`})
   }
 
   render() {

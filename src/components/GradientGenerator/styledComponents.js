@@ -3,11 +3,7 @@
 import styled from 'styled-components'
 
 export const MainCont = styled.div`
-  background-image: linear-gradient(
-    to ${props => props.bgStatus},
-    ${props => props.color1},
-    ${props => props.color2}
-  );
+  background-image: linear-gradient(${props => props.bgStatus});
   height: 100vh;
   display: flex;
   flex-direction: column;
