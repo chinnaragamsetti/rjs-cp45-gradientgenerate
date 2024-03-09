@@ -47,7 +47,8 @@ export const InputCont = styled.div`
 export const Input = styled.input`
   width: 100px;
   height: 30px;
-  border: 0px;
+  border: none;
+  box-sizing: border-box;
   cursor: pointer;
 `
 
@@ -58,4 +59,5 @@ export const Button = styled.button`
   font-size: 5px;
   border-radius: 5px;
   border: 0px;
+  cursor: pointer;
 `
