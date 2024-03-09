@@ -47,9 +47,8 @@ export const InputCont = styled.div`
 export const Input = styled.input`
   width: 100px;
   height: 30px;
+  background-color: transparent;
   border: none;
-  outline: none;
-  box-sizing: border-box;
   cursor: pointer;
 `
 
