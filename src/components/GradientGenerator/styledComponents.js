@@ -48,6 +48,7 @@ export const Input = styled.input`
   width: 100px;
   height: 30px;
   border: none;
+  outline: none;
   box-sizing: border-box;
   cursor: pointer;
 `
